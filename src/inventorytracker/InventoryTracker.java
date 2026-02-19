@@ -20,13 +20,22 @@ public class InventoryTracker {
     
     //added new method
     public void checkStockLevel(int stockQuantity) {
-    if (stockQuantity <= 0) {
-        System.out.println("Out of Stock");
-    } else if (stockQuantity < 10) {
-        System.out.println("Low Stock");
-    } else {
-        System.out.println("In Stock");
+        if (stockQuantity <= 0) {
+            System.out.println("Out of Stock");
+        } else if (stockQuantity < 10) {
+            System.out.println("Low Stock");
+        } else {
+            System.out.println("In Stock");
+        }
     }
-}
+    
+    //added second method
+    public void alertLowStock(int stockQuantity) {
+        if (stockQuantity <= 5 && stockQuantity > 0) {
+            System.out.println("Warning: Low stock remaining!");
+        } else if (stockQuantity <= 0) {
+            System.out.println("Product is out of stock!");
+        }
+    }
     
 }
