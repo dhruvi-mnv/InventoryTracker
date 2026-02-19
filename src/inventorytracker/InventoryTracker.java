@@ -18,4 +18,15 @@ public class InventoryTracker {
         // TODO code application logic here
     }
     
+    //added new method
+    public void checkStockLevel(int stockQuantity) {
+    if (stockQuantity <= 0) {
+        System.out.println("Out of Stock");
+    } else if (stockQuantity < 10) {
+        System.out.println("Low Stock");
+    } else {
+        System.out.println("In Stock");
+    }
+}
+    
 }
